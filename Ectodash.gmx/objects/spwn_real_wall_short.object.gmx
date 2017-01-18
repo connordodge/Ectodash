@@ -26,10 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-instance_create(x, y, obj_wall);
-instance_create(x, y-sprite_get_height(obj_wall), obj_wall);
-instance_create(x, y-2*sprite_get_height(obj_wall), obj_wall);
-instance_create(x, y-3*sprite_get_height(obj_wall), obj_wall);
+instance_create(x, y, obj_real_wall);
+instance_create(x, y-sprite_get_height(obj_real_wall), obj_real_wall);
 </string>
           </argument>
         </arguments>
