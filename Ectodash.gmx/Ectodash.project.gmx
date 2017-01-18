@@ -7,12 +7,19 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_gaspar_run</sprite>
+    <sprite>sprites\spr_floor</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\move_left.gml</script>
+  </scripts>
   <objects name="objects">
     <objects name="Gaspar">
       <object>objects\obj_gaspar</object>
+    </objects>
+    <objects name="Floor">
+      <object>objects\obj_floor</object>
     </objects>
   </objects>
   <rooms name="rooms">
