@@ -8,6 +8,8 @@
   <sprites name="sprites">
     <sprite>sprites\spr_gaspar_run</sprite>
     <sprite>sprites\spr_floor</sprite>
+    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\sprite4</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -20,6 +22,16 @@
     </objects>
     <objects name="Floor">
       <object>objects\obj_floor</object>
+    </objects>
+    <objects name="Obstacles">
+      <object>objects\obj_wall</object>
+    </objects>
+    <objects name="Parents">
+      <object>objects\NonPlayer</object>
+    </objects>
+    <objects name="Spawners">
+      <object>objects\obj_spawn_master</object>
+      <object>objects\spwn_wall_short</object>
     </objects>
   </objects>
   <rooms name="rooms">
