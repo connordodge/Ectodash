@@ -8,11 +8,15 @@
   <sprites name="sprites">
     <sprite>sprites\spr_gaspar_run</sprite>
     <sprite>sprites\spr_floor</sprite>
+    <sprite>sprites\spr_real_wall</sprite>
+    <sprite>sprites\spr_master_spawner</sprite>
+    <sprite>sprites\spr_ecto_wall</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\move_left.gml</script>
+    <script>scripts\random_obstacle.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Gaspar">
@@ -20,6 +24,20 @@
     </objects>
     <objects name="Floor">
       <object>objects\obj_floor</object>
+    </objects>
+    <objects name="Obstacles">
+      <object>objects\obj_real_wall</object>
+      <object>objects\obj_ecto_wall</object>
+    </objects>
+    <objects name="Parents">
+      <object>objects\NonPlayer</object>
+    </objects>
+    <objects name="Spawners">
+      <object>objects\obj_spawn_master</object>
+      <object>objects\spwn_real_wall_short</object>
+      <object>objects\spwn_ecto_wall_short</object>
+      <object>objects\spwn_real_wall_tall</object>
+      <object>objects\spwn_ecto_wall_tall</object>
     </objects>
   </objects>
   <rooms name="rooms">
