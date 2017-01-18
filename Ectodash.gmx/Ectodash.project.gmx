@@ -15,6 +15,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\move_left.gml</script>
+    <script>scripts\random_obstacle.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Gaspar">
@@ -32,6 +33,7 @@
     <objects name="Spawners">
       <object>objects\obj_spawn_master</object>
       <object>objects\spwn_wall_short</object>
+      <object>objects\spwn_wall_tall</object>
     </objects>
   </objects>
   <rooms name="rooms">
