@@ -82,6 +82,8 @@ if(screen_pressed){
             <kind>1</kind>
             <string>if (other.ecto == ecto){
     game_restart();
+} else if (global.hspd &lt; global.hspd_max) {
+    global.hspd += .05;
 }
 </string>
           </argument>
