@@ -326,9 +326,13 @@
         </objects>
       </objects>
     </objects>
+    <objects name="Info">
+      <object>objects\obj_init</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_init</room>
+    <room>rooms\rm_game</room>
     <rooms name="geon_fx">
       <room>rooms\rm_geon_test_stream</room>
       <room>rooms\rm_geon_test_burst</room>

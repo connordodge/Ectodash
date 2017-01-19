@@ -51,7 +51,7 @@ alarm_set(0,irandom_range(interval_low, interval_high));
           <argument>
             <kind>1</kind>
             <string>instance_create(2*display_get_width(), y, random_obstacle());
-alarm_set(0,irandom_range(interval_low, interval_high));
+alarm_set(0,irandom_range(interval_low, interval_high)*(global.hspd_initial/global.hspd));
 </string>
           </argument>
         </arguments>
