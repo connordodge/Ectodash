@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>ecto = true;
+vspd = 5;
 
 //Generated for GMS in Geon FX v0.9.0
 //Put this code in Create event
@@ -77,13 +78,31 @@ global.pe_Effect1 = part_emitter_create(global.ps);
             <kind>1</kind>
             <string>//screen_pressed = device_mouse_check_button(0||1||2||3||4,mb_left);
 screen_pressed = mouse_check_button(mb_left);
+space = keyboard_check(vk_space);
 
-if(screen_pressed){
+if(screen_pressed){                                   
     image_alpha = 0.3;
     ecto = true;
 } else {
     image_alpha = 1.0;
     ecto = false;
+}
+
+//show_debug_message(mouse_x);
+show_debug_message(mouse_y);
+
+if (space) {
+    for (var i = 0; i &lt; vspd; i++){ 
+        if(y - sprite_height/2 &gt; 0){
+            y--
+        }
+    }
+} else {
+    for (var i = 0; i &lt; vspd; i++){
+        if(!place_meeting(x,y+sprite_height/2,obj_floor)){
+            y++;
+        }
+    }
 }
 
 //Adjusting Emitter positions. Starting Emitter Streams or Bursts.

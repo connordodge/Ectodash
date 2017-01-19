@@ -74,7 +74,7 @@ alarm_set(0,irandom_range(interval_low, interval_high)*(global.hspd_initial/glob
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message(alarm_get(0));
+            <string>//show_debug_message(alarm_get(0));
 </string>
           </argument>
         </arguments>
