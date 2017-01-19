@@ -26,6 +26,33 @@
           <argument>
             <kind>1</kind>
             <string>ecto = true;
+
+//Generated for GMS in Geon FX v0.9.0
+//Put this code in Create event
+
+//Creating Particle System
+global.ps = part_system_create();
+part_system_depth(global.ps, -1);
+
+//Creating Particle Types
+//Effect1
+global.pt_Effect1 = part_type_create();
+part_type_shape(global.pt_Effect1, pt_shape_cloud);
+part_type_size(global.pt_Effect1, 0.50, 1, 0, 0);
+part_type_scale(global.pt_Effect1, 3, 1);
+part_type_orientation(global.pt_Effect1, 0, 177, 0, 0, 0);
+part_type_color3(global.pt_Effect1, 8453888, 11785082, 16777088);
+part_type_alpha3(global.pt_Effect1, 0.12, 0.13, 0.20);
+part_type_blend(global.pt_Effect1, 0);
+part_type_life(global.pt_Effect1, 80, 80);
+part_type_speed(global.pt_Effect1, 0.10, 0.50, 0, 0);
+part_type_direction(global.pt_Effect1, 0, 360, 0, 0);
+part_type_gravity(global.pt_Effect1, 1, 180);
+
+//Creating Emitters
+global.pe_Effect1 = part_emitter_create(global.ps);
+
+
 </string>
           </argument>
         </arguments>
@@ -58,6 +85,13 @@ if(screen_pressed){
     image_alpha = 1.0;
     ecto = false;
 }
+
+//Adjusting Emitter positions. Starting Emitter Streams or Bursts.
+var xp, yp;
+xp = x;
+yp = y;
+part_emitter_region(global.ps, global.pe_Effect1, xp-15, xp+15, yp-15, yp+15, ps_shape_ellipse, ps_distr_linear);
+part_emitter_stream(global.ps, global.pe_Effect1, global.pt_Effect1, 1);
 </string>
           </argument>
         </arguments>
@@ -82,6 +116,7 @@ if(screen_pressed){
             <kind>1</kind>
             <string>if (other.ecto == ecto){
     game_restart();
+    part_emitter_destroy_all(global.ps);
 } else if (global.hspd &lt; global.hspd_max) {
     global.hspd += .05;
 }
