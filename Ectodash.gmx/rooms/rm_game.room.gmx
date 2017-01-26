@@ -54,6 +54,7 @@
     <instance objName="obj_gaspar" x="64" y="304" name="inst_1695D882" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="-16" y="336" name="inst_F336CCD8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spawn_master" x="256" y="320" name="inst_430B7EF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ceiling" x="-16" y="-8" name="inst_47656D0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -28,6 +28,7 @@
             <string>global.hspd_initial = 15;
 global.hspd = global.hspd_initial;
 global.hspd_max = 25;
+global.points = 0;
 
 room_goto_next();
 </string>
