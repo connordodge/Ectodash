@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>ecto = true;
+vspd = 0;
 
 //Generated for GMS in Geon FX v0.9.0
 //Put this code in Create event
@@ -77,13 +78,39 @@ global.pe_Effect1 = part_emitter_create(global.ps);
             <kind>1</kind>
             <string>//screen_pressed = device_mouse_check_button(0||1||2||3||4,mb_left);
 screen_pressed = mouse_check_button(mb_left);
+space = keyboard_check(vk_space);
+pause = keyboard_check(vk_alt);
 
-if(screen_pressed){
+if(pause){
+    global.hspd = 0;
+}
+
+if(screen_pressed){                                   
     image_alpha = 0.3;
     ecto = true;
 } else {
     image_alpha = 1.0;
     ecto = false;
+}
+
+//show_debug_message(mouse_x);
+//show_debug_message(mouse_y);
+
+if (space) {
+vspd = 8;
+    for (var i = 0; i &lt; vspd; i++){ 
+        if(!place_meeting(x,y-1, obj_ceiling)){
+            y--
+        }
+    }
+} else {
+if(vspd &gt; 0){vspd = 0}
+vspd -= 1.5;
+    for (var i = 0; i &lt; abs(vspd); i++){
+        if(!place_meeting(x,y+sprite_height/2,obj_floor)){
+            y++;
+        }
+    }
 }
 
 //Adjusting Emitter positions. Starting Emitter Streams or Bursts.
@@ -117,8 +144,36 @@ part_emitter_stream(global.ps, global.pe_Effect1, global.pt_Effect1, 1);
             <string>if (other.ecto == ecto){
     game_restart();
     part_emitter_destroy_all(global.ps);
-} else if (global.hspd &lt; global.hspd_max) {
-    global.hspd += .05;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_points_block">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string> global.points++;
+show_debug_message(global.points);
+if (global.hspd &lt; global.hspd_max) {
+    global.hspd += .1;
+}
+with(other){
+    instance_destroy();
 }
 </string>
           </argument>

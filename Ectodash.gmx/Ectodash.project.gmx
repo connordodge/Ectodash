@@ -222,6 +222,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_gaspar_run</sprite>
     <sprite>sprites\spr_floor</sprite>
+    <sprite>sprites\spr_ceiling</sprite>
     <sprite>sprites\spr_real_wall</sprite>
     <sprite>sprites\spr_master_spawner</sprite>
     <sprite>sprites\spr_ecto_wall</sprite>
@@ -262,6 +263,7 @@
         <sprite>sprites\spr_pt_shape_snow_new</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\spr_points_block</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -290,8 +292,10 @@
     <objects name="Gaspar">
       <object>objects\obj_gaspar</object>
     </objects>
-    <objects name="Floor">
+    <objects name="Borders">
       <object>objects\obj_floor</object>
+      <object>objects\obj_ceiling</object>
+      <object>objects\obj_points_block</object>
     </objects>
     <objects name="Obstacles">
       <object>objects\obj_real_wall</object>
@@ -327,7 +331,7 @@
       </objects>
     </objects>
     <objects name="Info">
-      <object>objects\obj_init</object>
+      <object>objects\obj_init_globals</object>
     </objects>
   </objects>
   <rooms name="rooms">
