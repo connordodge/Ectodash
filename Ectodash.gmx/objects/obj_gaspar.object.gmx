@@ -3,7 +3,7 @@
   <spriteName>spr_gaspar_run</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>ecto = true;
 vspd = 0;
-y = display_get_gui_height()/2;
+
 
 //Generated for GMS in Geon FX v0.9.0
 //Put this code in Create event
@@ -86,6 +86,10 @@ touched_right = (touch_a &amp;&amp; touch_a_x &gt; display_get_gui_width()/2) ||
 touched_left = (touch_a &amp;&amp; touch_a_x &lt; display_get_gui_width()/2) || (touch_b &amp;&amp; touch_b_x &lt; display_get_gui_width()/2)
 space = keyboard_check(vk_space);
 pause = keyboard_check(vk_alt);
+y = display_get_gui_height()/2;
+//x++;
+show_debug_message('x '+string(x)+' y '+string(y));
+show_debug_message('wid '+string(display_get_gui_width())+' hei '+string(display_get_gui_height()));
 
 if(pause){
     global.hspd = 0;
@@ -181,6 +185,29 @@ if (global.hspd &lt; global.hspd_max) {
 with(other){
     instance_destroy();
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
 </string>
           </argument>
         </arguments>

@@ -220,14 +220,7 @@
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_gaspar_run</sprite>
-    <sprite>sprites\spr_floor</sprite>
-    <sprite>sprites\spr_ceiling</sprite>
-    <sprite>sprites\spr_real_tall</sprite>
-    <sprite>sprites\spr_real_wall</sprite>
     <sprite>sprites\spr_master_spawner</sprite>
-    <sprite>sprites\spr_ecto_tall</sprite>
-    <sprite>sprites\spr_ecto_wall</sprite>
     <sprite>sprites\spr_bat</sprite>
     <sprite>sprites\spr_asteroid</sprite>
     <sprite>sprites\spr_rock</sprite>
@@ -265,8 +258,22 @@
         <sprite>sprites\spr_pt_shape_snow_new</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_points_block</sprite>
-    <sprite>sprites\sprite38</sprite>
+    <sprites name="Gaspar">
+      <sprite>sprites\spr_gaspar_run</sprite>
+    </sprites>
+    <sprites name="Moving Wall">
+      <sprite>sprites\spr_ecto_moving</sprite>
+      <sprite>sprites\spr_real_moving</sprite>
+    </sprites>
+    <sprites name="Walls">
+      <sprite>sprites\spr_ecto_wall</sprite>
+      <sprite>sprites\spr_real_wall</sprite>
+    </sprites>
+    <sprite>sprites\spr_ceiling</sprite>
+    <sprite>sprites\spr_floor</sprite>
+    <sprites name="Borders">
+      <sprite>sprites\spr_points_block</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

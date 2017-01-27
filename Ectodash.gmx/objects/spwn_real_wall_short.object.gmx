@@ -74,7 +74,7 @@ instance_create(x, y-sprite_get_height(obj_real_wall), obj_real_wall);
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-show_debug_message('real '+string(sprite_get_height(obj_real_wall))+ ' ecto '+string(sprite_get_height(obj_ecto_wall)));
+//show_debug_message('real '+string(sprite_get_height(obj_real_wall))+ ' ecto '+string(sprite_get_height(obj_ecto_wall)));
 </string>
           </argument>
         </arguments>
