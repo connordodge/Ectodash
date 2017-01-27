@@ -27,8 +27,14 @@
             <kind>1</kind>
             <string>event_inherited();
 ecto = true;
-vspd = 3;
-dir = 1;
+vspd = irandom(5)+1;
+coin_flip = irandom(1);
+dir = 0;
+if(coin_flip == 1){
+    dir = 1;
+} else {
+    dir = -1;
+}
 </string>
           </argument>
         </arguments>

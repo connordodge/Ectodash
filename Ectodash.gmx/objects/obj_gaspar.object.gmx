@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>ecto = true;
 vspd = 0;
+y = display_get_gui_height()/2;
 
 //Generated for GMS in Geon FX v0.9.0
 //Put this code in Create event
@@ -90,14 +91,14 @@ if(pause){
     global.hspd = 0;
 }
 
-if((touch_a || touch_b) &amp;&amp; touched_right){                                   
+if((touch_a || touch_b) /*&amp;&amp; touched_right*/){                                   
     image_alpha = 0.3;
     ecto = true;
 } else {
     image_alpha = 1.0;
     ecto = false;
 }
-
+/*
 if((touch_a || touch_b) &amp;&amp; touched_left){
     vspd = 8;
     for (var i = 0; i &lt; vspd; i++){ 
@@ -114,6 +115,7 @@ if((touch_a || touch_b) &amp;&amp; touched_left){
             }
         }
 }
+*/
 
 
 
