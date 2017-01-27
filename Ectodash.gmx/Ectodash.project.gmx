@@ -223,8 +223,10 @@
     <sprite>sprites\spr_gaspar_run</sprite>
     <sprite>sprites\spr_floor</sprite>
     <sprite>sprites\spr_ceiling</sprite>
+    <sprite>sprites\spr_real_tall</sprite>
     <sprite>sprites\spr_real_wall</sprite>
     <sprite>sprites\spr_master_spawner</sprite>
+    <sprite>sprites\spr_ecto_tall</sprite>
     <sprite>sprites\spr_ecto_wall</sprite>
     <sprite>sprites\spr_bat</sprite>
     <sprite>sprites\spr_asteroid</sprite>
@@ -264,6 +266,7 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_points_block</sprite>
+    <sprite>sprites\sprite38</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -300,10 +303,12 @@
     <objects name="Obstacles">
       <object>objects\obj_real_wall</object>
       <object>objects\obj_ecto_wall</object>
+      <object>objects\obj_moving_wall</object>
     </objects>
     <objects name="Parents">
       <object>objects\NonPlayer</object>
       <object>objects\Obstacle</object>
+      <object>objects\Border</object>
     </objects>
     <objects name="Spawners">
       <object>objects\obj_spawn_master</object>
@@ -311,6 +316,7 @@
       <object>objects\spwn_ecto_wall_short</object>
       <object>objects\spwn_real_wall_tall</object>
       <object>objects\spwn_ecto_wall_tall</object>
+      <object>objects\spwn_moving_wall</object>
     </objects>
     <objects name="geon_fx">
       <object>objects\obj_geonfx_con</object>

@@ -115,25 +115,7 @@ if((touch_a || touch_b) &amp;&amp; touched_left){
         }
 }
 
-//show_debug_message('mouse '+string(mouse_x)+' display '+string(display_get_gui_width()));
-//show_debug_message(mouse_y);
 
-/*if (space) {
-vspd = 8;
-    for (var i = 0; i &lt; vspd; i++){ 
-        if(!place_meeting(x,y-1, obj_ceiling)){
-            y--
-        }
-    }
-} else {
-if(vspd &gt; 0){vspd = 0}
-vspd -= 1.5;
-    for (var i = 0; i &lt; abs(vspd); i++){
-        if(!place_meeting(x,y+sprite_height/2,obj_floor)){
-            y++;
-        }
-    }
-}*/
 
 //Adjusting Emitter positions. Starting Emitter Streams or Bursts.
 var xp, yp;
