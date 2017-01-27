@@ -77,7 +77,12 @@ global.pe_Effect1 = part_emitter_create(global.ps);
           <argument>
             <kind>1</kind>
             <string>//screen_pressed = device_mouse_check_button(0||1||2||3||4,mb_left);
-screen_pressed = mouse_check_button(mb_left);
+touch_a = device_mouse_check_button(0,mb_left);
+touch_a_x = device_mouse_x_to_gui(0);
+touch_b = device_mouse_check_button(1,mb_left);
+touch_b_x = device_mouse_x_to_gui(1);
+touched_right = (touch_a &amp;&amp; touch_a_x &gt; display_get_gui_width()/2) || (touch_b &amp;&amp; touch_b_x &gt; display_get_gui_width()/2);
+touched_left = (touch_a &amp;&amp; touch_a_x &lt; display_get_gui_width()/2) || (touch_b &amp;&amp; touch_b_x &lt; display_get_gui_width()/2)
 space = keyboard_check(vk_space);
 pause = keyboard_check(vk_alt);
 
@@ -85,7 +90,7 @@ if(pause){
     global.hspd = 0;
 }
 
-if(screen_pressed){                                   
+if((touch_a || touch_b) &amp;&amp; touched_right){                                   
     image_alpha = 0.3;
     ecto = true;
 } else {
@@ -93,10 +98,27 @@ if(screen_pressed){
     ecto = false;
 }
 
-//show_debug_message(mouse_x);
+if((touch_a || touch_b) &amp;&amp; touched_left){
+    vspd = 8;
+    for (var i = 0; i &lt; vspd; i++){ 
+        if(!place_meeting(x,y-1, obj_ceiling)){
+            y--
+        }
+    }
+} else {
+    if(vspd &gt; 0){vspd = 0}
+    vspd -= 1.5;
+        for (var i = 0; i &lt; abs(vspd); i++){
+            if(!place_meeting(x,y+sprite_height/2,obj_floor)){
+                y++;
+            }
+        }
+}
+
+//show_debug_message('mouse '+string(mouse_x)+' display '+string(display_get_gui_width()));
 //show_debug_message(mouse_y);
 
-if (space) {
+/*if (space) {
 vspd = 8;
     for (var i = 0; i &lt; vspd; i++){ 
         if(!place_meeting(x,y-1, obj_ceiling)){
@@ -111,7 +133,7 @@ vspd -= 1.5;
             y++;
         }
     }
-}
+}*/
 
 //Adjusting Emitter positions. Starting Emitter Streams or Bursts.
 var xp, yp;
