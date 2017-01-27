@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>ecto = true;
-vspd = 5;
+vspd = 0;
 
 //Generated for GMS in Geon FX v0.9.0
 //Put this code in Create event
@@ -97,13 +97,16 @@ if(screen_pressed){
 //show_debug_message(mouse_y);
 
 if (space) {
+vspd = 8;
     for (var i = 0; i &lt; vspd; i++){ 
         if(!place_meeting(x,y-1, obj_ceiling)){
             y--
         }
     }
 } else {
-    for (var i = 0; i &lt; vspd; i++){
+if(vspd &gt; 0){vspd = 0}
+vspd -= 1.5;
+    for (var i = 0; i &lt; abs(vspd); i++){
         if(!place_meeting(x,y+sprite_height/2,obj_floor)){
             y++;
         }
@@ -116,6 +119,32 @@ xp = x;
 yp = y;
 part_emitter_region(global.ps, global.pe_Effect1, xp-15, xp+15, yp-15, yp+15, ps_shape_ellipse, ps_distr_linear);
 part_emitter_stream(global.ps, global.pe_Effect1, global.pt_Effect1, 1);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="Obstacle">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (other.ecto == ecto){
+    game_restart();
+    part_emitter_destroy_all(global.ps);
+}
 </string>
           </argument>
         </arguments>
@@ -145,32 +174,6 @@ if (global.hspd &lt; global.hspd_max) {
 }
 with(other){
     instance_destroy();
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="Obstacle">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (other.ecto == ecto){
-    game_restart();
-    part_emitter_destroy_all(global.ps);
 }
 </string>
           </argument>
