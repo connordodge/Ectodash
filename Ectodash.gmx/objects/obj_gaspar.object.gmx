@@ -85,7 +85,7 @@ if(pause){
     global.hspd = 0;
 }
 
-if(screen_pressed){                                   
+if(screen_pressed &amp;&amp; mouse_x &gt; display_get_gui_width()/2){                                   
     image_alpha = 0.3;
     ecto = true;
 } else {
@@ -93,7 +93,7 @@ if(screen_pressed){
     ecto = false;
 }
 
-//show_debug_message(mouse_x);
+//show_debug_message('mouse '+string(mouse_x)+' display '+string(display_get_gui_width()));
 //show_debug_message(mouse_y);
 
 if (space) {
