@@ -220,17 +220,24 @@
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_gaspar_run</sprite>
-    <sprite>sprites\spr_floor</sprite>
-    <sprite>sprites\spr_ceiling</sprite>
-    <sprite>sprites\spr_real_tall</sprite>
-    <sprite>sprites\spr_real_wall</sprite>
-    <sprite>sprites\spr_master_spawner</sprite>
-    <sprite>sprites\spr_ecto_tall</sprite>
-    <sprite>sprites\spr_ecto_wall</sprite>
-    <sprite>sprites\spr_bat</sprite>
-    <sprite>sprites\spr_asteroid</sprite>
-    <sprite>sprites\spr_rock</sprite>
+    <sprites name="Gaspar">
+      <sprite>sprites\spr_gaspar_run</sprite>
+    </sprites>
+    <sprites name="Walls">
+      <sprites name="Moving">
+        <sprite>sprites\spr_ecto_moving</sprite>
+        <sprite>sprites\spr_real_moving</sprite>
+      </sprites>
+      <sprites name="Stationary">
+        <sprite>sprites\spr_real_wall</sprite>
+        <sprite>sprites\spr_ecto_wall</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Borders">
+      <sprite>sprites\spr_floor</sprite>
+      <sprite>sprites\spr_ceiling</sprite>
+      <sprite>sprites\spr_points_block</sprite>
+    </sprites>
     <sprites name="geon_fx">
       <sprites name="pt_shapes_gms">
         <sprite>sprites\spr_pt_shape_pixel</sprite>
@@ -265,8 +272,6 @@
         <sprite>sprites\spr_pt_shape_snow_new</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\spr_points_block</sprite>
-    <sprite>sprites\sprite38</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -312,10 +317,6 @@
     </objects>
     <objects name="Spawners">
       <object>objects\obj_spawn_master</object>
-      <object>objects\spwn_real_wall_short</object>
-      <object>objects\spwn_ecto_wall_short</object>
-      <object>objects\spwn_real_wall_tall</object>
-      <object>objects\spwn_ecto_wall_tall</object>
       <object>objects\spwn_moving_wall</object>
     </objects>
     <objects name="geon_fx">

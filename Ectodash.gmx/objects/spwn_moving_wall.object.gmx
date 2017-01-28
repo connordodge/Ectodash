@@ -26,9 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-offset = irandom(display_get_gui_height()/2 - sprite_get_height(obj_moving_wall));
+offset = irandom(10);
+
 if(irandom(1) == 1){
-    offset = offset*-1;
+    offset = offset*(-1);
 }
 instance_create(x,display_get_gui_height()/2 + offset,obj_moving_wall);
 </string>

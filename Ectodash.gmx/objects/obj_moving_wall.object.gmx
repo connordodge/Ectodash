@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 ecto = true;
-vspd = irandom(5)+1;
+vspd = irandom(5)+3;
 coin_flip = irandom(1);
 dir = 0;
 if(coin_flip == 1){
@@ -82,9 +82,9 @@ if(coin_flip == 1){
             <kind>1</kind>
             <string>event_inherited();
 if(ecto){
-    sprite_index = spr_ecto_tall;
+    sprite_index = spr_ecto_moving;
 } else {
-    sprite_index = spr_real_tall;
+    sprite_index = spr_real_moving;
 }
 
 for (var i = 0; i &lt; vspd; i++){ 

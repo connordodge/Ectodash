@@ -125,7 +125,6 @@ xp = x;
 yp = y;
 part_emitter_region(global.ps, global.pe_Effect1, xp-15, xp+15, yp-15, yp+15, ps_shape_ellipse, ps_distr_linear);
 part_emitter_stream(global.ps, global.pe_Effect1, global.pt_Effect1, 1);
-
 </string>
           </argument>
         </arguments>
@@ -149,8 +148,8 @@ part_emitter_stream(global.ps, global.pe_Effect1, global.pt_Effect1, 1);
           <argument>
             <kind>1</kind>
             <string>if (other.ecto == ecto){
-    //game_restart();
-    //part_emitter_destroy_all(global.ps);
+    game_restart();
+    part_emitter_destroy_all(global.ps);
 }
 </string>
           </argument>
