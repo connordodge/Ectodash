@@ -318,6 +318,7 @@
     <objects name="Spawners">
       <object>objects\obj_spawn_master</object>
       <object>objects\spwn_moving_wall</object>
+      <object>objects\spwn_stationary_wall</object>
     </objects>
     <objects name="geon_fx">
       <object>objects\obj_geonfx_con</object>
